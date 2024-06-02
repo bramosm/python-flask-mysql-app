@@ -11,24 +11,24 @@
 </head>
 <body>
 
-    <h1 class="text-center mt-5 mb-5 text-primary">CAMBIO</h1>
+    <h1 class="text-center mt-5 mb-5 text-primary">Python-Flask-MySQL (CAMBIO)</h1>
 
     <div class="container">
         <div class="card shadow">
             <div class="card-body">
-                <form action="/user" method="POST">
+                <form action="/prueba" method="POST">
                     <div class="row mb-3">
                         <div class="col">
                             <label>Titulo</label>
-                            <input type="text" class="form-control mb-3" name="username">
+                            <input type="text" class="form-control mb-3" name="Titulo">
                         </div>
                         <div class="col">
                             <label>Estudiante</label>
-                            <input type="text" class="form-control mb-3" name="name">
+                            <input type="text" class="form-control mb-3" name="Estudiante">
                         </div>
                         <div class="col">
-                            <label>Matería</label>
-                            <input type="text" class="form-control mb-3" name="password">
+                            <label>Materia</label>
+                            <input type="text" class="form-control mb-3" name="Materia">
                         </div>
                         <div class="col">
                             <button class="btn btn-primary mb-3 mt-4" type="submit">Save</button>
@@ -36,6 +36,38 @@
                     </div>
 
                 </form>
+
+
+                <!-- Tabla -->
+
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Titulo</th>
+                            <th scope="col">Estudiante</th>
+                            <th scope="col">Materia</th>
+
+                        </tr>
+                    </thead>
+                
+                <tbody>
+                    {% for d in data %}
+                        <tr>
+                            <td>{{d.id}}</td>
+                            <td>{{d.Titulo}}</td>
+                            <td>{{d.Estudiante}}</td>
+                            <td>{{d.Materia}}</td>
+                        </tr>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+
+
+
+
+                    {% endfor %}
 
                 </tbody>
 
